@@ -1,0 +1,15 @@
+<?php
+ echo "PHP"
+?>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>TITLE</title>
+</head>
+<body>
+BODY
+</body>
+</html>
+

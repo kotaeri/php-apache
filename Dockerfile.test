@@ -1,0 +1,4 @@
+FROM registry.redhat.io/ubi8/php-72
+COPY html/ /var/www/html/
+EXPOSE 80
+
