@@ -5,6 +5,7 @@ RUN yum --disableplugin=subscription-manager -y install httpd
 RUN yum --disableplugin=subscription-manager -y install php php-pdo php-mysqlnd 
 RUN yum --disableplugin=subscription-manager -y install procps-ng
 RUN yum --disableplugin=subscription-manager -y install iputils net-tools
+RUN yum --disableplugin=subscription-manager -y install mysql-community-client
 RUN yum --disableplugin=subscription-manager clean all
 
 COPY html/ /var/www/html/
