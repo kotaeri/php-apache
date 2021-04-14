@@ -5,7 +5,10 @@ RUN yum --disableplugin=subscription-manager -y module enable php:7.2 \
   && yum --disableplugin=subscription-manager -y install php php-pdo php-mysqlnd \
   && yum --disableplugin=subscription-manager -y install procps-ng \
   && yum --disableplugin=subscription-manager -y install iputils net-tools \
+  && yum -y install mariadb-connector-c-config mysql-common mysql \
   && yum --disableplugin=subscription-manager clean all
+
+#  && yum --disableplugin=subscription-manager -y install mariadb-connector-c-config mysql-common mysql 
 
 COPY html/ /var/www/html/
 
