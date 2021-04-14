@@ -1,11 +1,11 @@
 FROM registry.redhat.io/ubi8
 
-RUN yum --disableplugin=subscription-manager -y module enable php:7.2 \
-  && yum --disableplugin=subscription-manager -y install httpd \
-  && yum --disableplugin=subscription-manager -y install php php-pdo php-mysqlnd \
-  && yum --disableplugin=subscription-manager -y install procps-ng \
-  && yum --disableplugin=subscription-manager -y install iputils net-tools \
-  && yum --disableplugin=subscription-manager clean all
+RUN yum --disableplugin=subscription-manager -y module enable php:7.2 
+RUN yum --disableplugin=subscription-manager -y install httpd
+RUN yum --disableplugin=subscription-manager -y install php php-pdo php-mysqlnd 
+RUN yum --disableplugin=subscription-manager -y install procps-ng
+RUN yum --disableplugin=subscription-manager -y install iputils net-tools
+RUN yum --disableplugin=subscription-manager clean all
 
 COPY html/ /var/www/html/
 
